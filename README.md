@@ -20,6 +20,20 @@ This Python application uses the **OpenAI Agent SDK** to simulate a multi-agent 
 
 ---
 
+## 🔁 Agent Handoff Explained
+
+This game uses **dynamic handoff logic** to shift control between agents based on the story context:
+
+- The **NarratorAgent** runs first to progress the story.
+- If the narration mentions keywords like `"goblin"` or `"dragon"`, a **handoff** to:
+  - `MonsterAgent` is triggered to handle combat, using the `roll_dice()` tool.
+  - After combat, control passes to the `ItemAgent` to reward the player with loot.
+- The system smoothly passes between agents using `Runner.run_sync()` with conditional checks.
+
+This handoff system creates a natural flow between storytelling, combat, and rewards — like a true Dungeon Master experience.
+
+---
+
 ## 🧩 Agents Overview
 
 | Agent          | Role                                                                 |
