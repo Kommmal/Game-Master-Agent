@@ -1,7 +1,9 @@
 import chainlit as cl
 from agents import Runner
 from setup_config import config
-from expert.orchestrator_agent import orchestrator_agent
+from expert.narrator_agent import narrator_agent
+from expert.monster_agent import monster_agent
+from expert.item_agent import item_agent
 
 
 @cl.on_chat_start
@@ -19,7 +21,7 @@ async def handle(msg: cl.Message):
 
     try:
         result = await Runner.run(
-            orchestrator_agent,   
+            narrator_agent,   
             history,
             run_config=config
         )

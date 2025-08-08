@@ -16,7 +16,9 @@ item_agent = Agent(
       "You have won the combat! Your reward is [describe the item] do not say loot say reward. It has been added to your inventory."
     - Do NOT ask the player if they want to keep or skip the reward—it is automatically added.
     - After this, show the player their entire current inventory with the heading "Inventory:" followed by an unordered list of all items.
-    - Then end the game with a sweet note like "Thank you for playing. Your adventure concludes here."
+    - after you reward the user ask them if they want to continue or quit.
+    - if they want to continue handoff to NarratorAgent.
+    - if they want to quit end the game with sweet 2 line sentence.
 
     2. Item Event Scenario (When an Item Appears in an Event):
     - When the NarratorAgent hands off control because the event involves finding or using an item, you take over.
@@ -33,6 +35,7 @@ item_agent = Agent(
     - Never ask the player the keep/skip question more than once per item.
     - Keep the suspense and excitement high but clear.
     - Focus only on item discovery, reward, and inventory management.
+    
     """
     ,
     model=model,

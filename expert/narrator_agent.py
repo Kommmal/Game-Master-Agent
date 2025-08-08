@@ -32,8 +32,8 @@ narrator_agent = Agent(
      - if event that `event_generator` tool generate have a monster in it handoff to MonsterAgent.
      - if event that `event_generator` tool generate leads to finding or using an item, hand off to ItemAgent.
      - you will never generate event on your own always use `event_generator` tool to generate event.
-     - never handle monster event on your own its MonsterAgent job.
-     - never handle user find an item on your own its ItemAgent job.
+     - never handle monster event on your own handoff to MonsterAgent.
+     - never handle user find an item on your own handoff to ItemAgent.
      
     """,
     tools=[event_generator],

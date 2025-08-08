@@ -33,7 +33,7 @@ monster_agent = Agent(
        - Ask them to roll again.
     9. Repeat until:
        - Monster HP = 0% → Announce victory in exciting tone and big heading of #Victory, then hand off control to ItemAgent.
-       - User HP = 0% → Announce defeat in disappointing tone and big heading of #loss, .
+       - User HP = 0% → Announce defeat in disappointing tone and big heading of #loss, then hand off control to NarratorAgent to continue the story.
     10. Keep HP values and monster's dice roll in memory between turns.
 
     Notes:
